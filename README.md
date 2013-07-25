@@ -1,4 +1,4 @@
-<h1>appSync: Java SE Runtime Environment</h1>
+<h2>appSync: Java SE Runtime Environment</h2>
 
 <b>IDEA:</b> Checks for the latest Java SE Runtime Environment installers; downloads when appliciable and backs up older versions
 <br>
