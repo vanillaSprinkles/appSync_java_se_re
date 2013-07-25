@@ -1,5 +1,7 @@
 #!/bin/bash
 ## appSync_java_se_re.sh
+## https://github.com/vanillaSprinkles/appSync_java_se_re
+
 
 DEBUG=0
 
