@@ -1,0 +1,69 @@
+See All Java Downloads
+http://java.com/en/download/manual.jsp
+=> Java Archive:   http://java.com/en/download/faq/java_6.xml
+
+http://java.com/en/download/faq/java_6.xml   #
+=> "Java SE 6"                               #
+=> "Java SE Runtime Environment 6u[0-9]*"    #
+=> ACCEPT
+=> http://download.oracle.com/otn/java/jdk/6u45-b06/jre-6u45-windows-x64.exe	#
+^^^ NEEDS ORACLE LOGIN
+# => http://download.oracle.com/otn/java/jdk/6u45-b06/jre-6u45-windows-x64.exe
+###### => convert to link below
+# JRE 6u45
+#  http://www.oracle.com/technetwork/java/javase/downloads/jre6downloads-1902815.html
+# => http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jre-6u45-windows-x64.exe
+
+
+
+
+http://www.oracle.com/technetwork/java/javase/downloads/index.html
+
+=>  "Java SE #"
+     Java SE 6u
+     Java SE 7u
+
+==> grep for  http://www.oracle.com/technetwork/java/javase/downloads/jre[0-9]*downloads-[0-9]*.html
+
+
+# 6 u 43
+http://www.oracle.com/technetwork/java/javase/downloads/jre6downloads-1902815.html
+
+# 7 u 17
+http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html
+
+=> ACCEPT LIC AGR
+
+=> jre-#u##-windows-x64.exe
+=> jre-#-##-windows-i586.exe
+
+## run installer, extracts here:
+# C:\Users\omaszk\AppData\LocalLow\Sun\Java
+# => Data1.cab
+# => jre1.7.0_17.msi
+
+Data1.cab displays same info archived as EXE file downloaded
+=> find out where msi file comes from
+InstallShield Developer 8.0
+
+
+
+
+## 7 ## "6 not available for public"
+# overview : http://www.oracle.com/technetwork/java/javase/overview/index.html
+#=> Java SE Site Map : http://www.oracle.com/technetwork/java/javase/sitemap-jsp-139155.html
+
+#==> Previous Releases : http://www.oracle.com/technetwork/java/javase/downloads/previous-jsp-138793.html => http://www.oracle.com/technetwork/java/archive-139210.html
+#===> Java SE 6 : http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html
+#====> Java SE Runtime Environment 6u[0-9]* : Accept => bad File Path
+######> http://download.oracle.com/otn/java/jdk/6u45-b06/jre-6u45-windows-x64.exe
+
+
+### J SE RE Download Page
+#==> Latest Release : http://www.oracle.com/technetwork/java/javase/downloads/index.html		1-35
+## grep for  http://www\.oracle\.com/technetwork/java/javase/downloads/jre7-downloads-[0-9]*\.html	36-70
+## ACCEPT
+# http://download.oracle.com/otn-pub/java/jdk/7u25-b17/jre-7u25-windows-x64.exe				71-75
+
+
+
