@@ -73,7 +73,7 @@ DLFILE=${TWDIR}/${APP}.grepme
 # start ripping the site
 rm -f ${DLFILE}
 #wget --quiet -q  --user-agent="${AGENT}" --referer=${REFERER}  --header "X-Requested-With: XMLHttpRequest"  --header "Cookie: ${COOKIE}"  ${URL} -O ${DLFILE}  2>/dev/null
-wget --quiet -q  --user-agent="${AGENT}" --referer=${REFERER}   ${URL} -O ${DLFILE}  2>/dev/null
+wget --no-check-certificate  --quiet -q  --user-agent="${AGENT}" --referer=${REFERER}   ${URL} -O ${DLFILE}  2>/dev/null
 
 
 newURL="http://www.oracle.com"$(/bin/grep -Eo "/technetwork/java/javase/downloads/jre7-downloads-[0-9]*\.html" ${DLFILE})
@@ -86,7 +86,7 @@ if [[ $DEBUG -eq 1 ]]; then
 fi
 rm -f ${DLFILE}
 #wget --quiet -q  --user-agent="${AGENT}" --referer=${REFERER}  --header "X-Requested-With: XMLHttpRequest"  --header "Cookie: ${COOKIE}"  ${newURL} -O ${DLFILE}  2>/dev/null
-wget --quiet -q  --user-agent="${AGENT}" --referer=${REFERER}   ${newURL} -O ${DLFILE}  2>/dev/null
+wget --no-check-certificate  --quiet -q  --user-agent="${AGENT}" --referer=${REFERER}   ${newURL} -O ${DLFILE}  2>/dev/null
 
 ##  downloads['jre-7u25-oth-JPR']['title'] = "Java SE Runtime Environment 7u25";
 TITLE=$( /bin/grep -Eo "\['title'\].*Runtime Env.*\"" ${DLFILE} | /bin/grep -Eo "Java.*[0-9]{1,2}u[0-9]{1,2}")
@@ -99,6 +99,7 @@ urlBIN=($( grep -Eo "http.*jre-${VER}.*\"" ${DLFILE} | sed 's/"//g'  ))
 
 DLP="${TWDIR}/jre-${VER}"
 
+REFERER="${newURL}"
 # download binaries
 mkdir -p "${DLP}"
 for dlurl in ${urlBIN[@]}; do 
@@ -110,9 +111,9 @@ for dlurl in ${urlBIN[@]}; do
   fi
   if [[ $DEBUG -eq 1 ]]; then
     echo "${dlurl}   ${dlurl##*/}"
-#    echo -e "wget --quiet -q --user-agent=\"${AGENT}\" --referer=${REFERER}   --header \"Cookie: ${COOKIE}\"   ${dlurl}  -O \"${DLP}/${dlurl##*/}\"\n"
+#    echo -e "wget  --no-check-certificate  --quiet -q --user-agent=\"${AGENT}\" --referer=${REFERER}   --header \"Cookie: ${COOKIE}\"   ${dlurl}  -O \"${DLP}/${dlurl##*/}\"\n"
   else
-      wget --quiet -q --user-agent="${AGENT}" --referer=${REFERER}   --header "Cookie: ${COOKIE}"   ${dlurl}  -O "${DLP}/${dlurl##*/}"
+      wget --no-check-certificate  --quiet -q --user-agent="${AGENT}" --referer=${REFERER}   --header "Cookie: ${COOKIE}"   ${dlurl}  -O "${DLP}/${dlurl##*/}"
   fi
 done
 
@@ -128,5 +129,5 @@ rm -rf ${TWDIR}
 
 exit
 DLURL="http://download.oracle.com/otn-pub/java/jdk/7u25-b17/jre-7u25-windows-i586-iftw.exe"
-wget --quiet -q --user-agent="${AGENT}" --referer=${REFERER}   --header "Cookie: ${COOKIE}"   ${DLURL}  -O ${TWDIR}/not.one.meg.exe
+wget --no-check-certificate  --quiet -q --user-agent="${AGENT}" --referer=${REFERER}   --header "Cookie: ${COOKIE}"   ${DLURL}  -O ${TWDIR}/not.one.meg.exe
 echo $COOKIE
