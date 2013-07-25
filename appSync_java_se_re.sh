@@ -1,7 +1,7 @@
 #!/bin/bash
 ## appSync_java_se_re.sh
 
-DEBUG=1
+DEBUG=0
 
 repo="/tmp/JAVA REPO"
 
@@ -24,17 +24,25 @@ email_who="admin@localhost"
 # Working Directory
 TWDIR="/tmp/${APP}"
 
+
+
+AGENT="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0"
+REFERER="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+URL="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+
+
+
+
+
+### where the work begins ###
+
+
 # create work dir
 mkdir -p ${TWDIR}
 if ! [ -d ${TWDIR} ] || ! [ -w ${TWDIR} ]; then
     echo "cannot write to ${TWDIR}; premature exit"
     exit
 fi
-
-
-AGENT="Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0"
-REFERER="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
-URL="http://www.oracle.com/technetwork/java/javase/downloads/index.html"
 
 
 function send_email() {
