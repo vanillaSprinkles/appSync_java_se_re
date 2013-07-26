@@ -1,7 +1,7 @@
 #!/bin/bash
 ## appSync_java_se_re.sh
 ## https://github.com/vanillaSprinkles/appSync_java_se_re
-
+## build 2
 
 repo="/tmp/JAVA REPO"
 
