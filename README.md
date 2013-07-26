@@ -5,6 +5,7 @@
 <b>Actual:</b> Checks the the lastest version and downloads all (check the TODO section)
 
 Finished Dev-Part1 approx at 2013-07-24.20.31
+Finished Dev-Part2 approx at 2013-07-25.22.21
 
 <b>TODO: </b>
 <br>
